@@ -1,0 +1,38 @@
+html, body {
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.issues {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: outside;
+}
+
+.issue {
+  display: block;
+  position: relative;
+  margin: 0;
+  margin-bottom: -1px;
+  border: 1px solid #ccc;
+}
+
+.issue .label {
+  position: absolute;
+  overflow: hidden;
+  text-indent: -1000px;
+  width: 0.5em; height: 100%;
+}
+
+.issue .label-1 { left: 0.5em }
+.issue .label-2 { left: 1em }
+
+.issue .title {
+  display: block;
+  padding: 0.5em;
+  padding-left: 1.5em;
+}

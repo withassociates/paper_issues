@@ -24,6 +24,10 @@ class PaperIssues < Sinatra::Base
     redirect to params[:path]
   end
 
+  get '/token' do
+    session[:oauth_token]
+  end
+
   get '/*' do
     repo = params[:splat].first
     @issues = client.issues repo

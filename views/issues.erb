@@ -1,7 +1,14 @@
-<ul>
+<ul class="issues">
   <% @issues.each do |issue| %>
-    <li>
-      <%= issue.title %>
+    <li class="issue">
+      <% issue.labels.each_with_index do |label, index| %>
+        <span
+          class="label label-<%= index %>"
+          style="background-color: #<%= label.color %>">
+          <%= label.name %>
+        </span>
+      <% end %>
+      <span class="title"><%= issue.title %></span>
     </li>
   <% end %>
 </ul>
