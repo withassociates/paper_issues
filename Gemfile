@@ -5,4 +5,7 @@ gem 'omniauth-github'
 gem 'sinatra'
 gem 'unicorn'
 
-gem 'pry', group: :development
+group :development do
+  gem 'pry'
+  gem 'foreman'
+end
