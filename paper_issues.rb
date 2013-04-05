@@ -2,7 +2,8 @@ require 'bundler'
 Bundler.require
 
 class PaperIssues < Sinatra::Base
-  use Rack::Session::Cookie
+  enable :sessions
+  set :session_secret, ENV['SESSION_SECRET'] if ENV['SESSION_SECRET']
 
   use OmniAuth::Builder do
     provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'], scope: 'repo'
