@@ -43,7 +43,7 @@ To see the the real error page, stop the app and restart in production:
 
     RACK_ENV=production foreman start
 
-Or, if you'd rather stay in development mode, you can authneticate with
+Or, if you'd rather stay in development mode, you can authenticate with
 GitHub by visiting
 [http://localhost:5000/auth/github](http://localhost:5000/auth/github)
 
