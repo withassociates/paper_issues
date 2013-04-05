@@ -1,10 +1,71 @@
 html, body {
+  margin: 0;
   padding: 0;
 }
 
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 15px;
+}
+
+h1 {
+  margin: 0 0 0.5em 0;
+}
+h2 {
+  margin: 0 0 0.5em 0;
+}
+
+input[type="text"] {
+  margin: 0;
+  border: 1px solid #aaa;
+  padding: 0.5em;
+
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+input[type="text"]:focus {
+  border-color: #aaa;
+  outline: none;
+}
+
+button {
+  margin: 0;
+  border: none;
+  padding: 0.5em;
+
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+
+  background: #aaa;
+  color: #fff;
+
+  cursor: pointer;
+}
+button:active {
+  background-color: #777;
+}
+
+.relocator {
+  display: block;
+  position: relative;
+}
+
+.relocator input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.relocator button {
+  position: absolute;
+  top: 2px; right: 2px; bottom: 2px; left: auto;
+}
+
+.panel {
+  margin: 0 auto;
+  border: 0.5em solid #eee;
+  padding: 2em;
+  max-width: 30em;
 }
 
 .issues {
@@ -17,9 +78,9 @@ body {
 .issue {
   display: block;
   position: relative;
+  border: 1px solid #eee;
   margin: 0;
   margin-bottom: -1px;
-  border: 1px solid #ccc;
 }
 
 .issue .label {
@@ -37,9 +98,17 @@ body {
 
 .issue .title {
   display: block;
-  border: 1px solid #eee;
   padding: 0.5em;
   padding-left: 2em;
 
   font-weight: bold;
+}
+
+.relocator-overlay {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+
+  background: rgba(255, 255, 255, 0.9) url(/img/cog.gif) no-repeat center;
+
+  visibility: hidden;
 }
