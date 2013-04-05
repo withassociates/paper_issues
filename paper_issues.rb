@@ -34,8 +34,17 @@ class PaperIssues < Sinatra::Base
     erb :issues, layout: :layout
   end
 
+
   error Octokit::NotFound do
     erb :repo_not_found, layout: :layout
+  end
+
+  error URI::InvalidURIError do
+    erb :repo_not_found, layout: :layout
+  end
+
+  error do
+    erb :whoops, layout: :layout
   end
 
 
