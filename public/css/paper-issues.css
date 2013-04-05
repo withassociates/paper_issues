@@ -4,6 +4,7 @@ html, body {
 
 body {
   font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
 }
 
 .issues {
@@ -25,14 +26,20 @@ body {
   position: absolute;
   overflow: hidden;
   text-indent: -1000px;
-  width: 0.5em; height: 100%;
+  width: 0; height: 100%;
+  border-left-width: 0.5em;
+  border-left-style: solid;
 }
 
 .issue .label-1 { left: 0.5em }
 .issue .label-2 { left: 1em }
+.issue .label-3 { left: 1.5em }
 
 .issue .title {
   display: block;
+  border: 1px solid #eee;
   padding: 0.5em;
-  padding-left: 1.5em;
+  padding-left: 2em;
+
+  font-weight: bold;
 }

@@ -4,7 +4,7 @@
       <% issue.labels.each_with_index do |label, index| %>
         <span
           class="label label-<%= index %>"
-          style="background-color: #<%= label.color %>">
+          style="border-color: #<%= label.color %>">
           <%= label.name %>
         </span>
       <% end %>
