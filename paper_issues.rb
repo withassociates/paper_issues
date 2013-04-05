@@ -31,7 +31,7 @@ class PaperIssues < Sinatra::Base
 
   get '/*' do
     repo = params[:splat].first
-    @issues = client.issues repo
+    @issues = Pager.new { |page| client.issues repo, page: page }
     erb :issues, layout: :layout
   end
 
@@ -46,6 +46,30 @@ class PaperIssues < Sinatra::Base
 
   error do
     erb :whoops, layout: :layout
+  end
+
+
+  class Pager
+    attr_reader :page_block
+
+    def initialize &page_block
+      @page_block = page_block
+    end
+
+    def each &block
+      page = 1
+
+      loop do
+        items = page_block.call page
+
+        if items.any?
+          items.each &block
+          page += 1
+        else
+          break
+        end
+      end
+    end
   end
 
 
