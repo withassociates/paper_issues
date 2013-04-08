@@ -61,6 +61,8 @@ follow these steps (replacing YOUR_APP with your chosen app name):
   as Main URL and Callback URL.
 * Add the Client ID and Secret to your Heroku config:  
   `heroku config:add GITHUB_KEY='YOUR_ID' GITHUB_SECRET='YOUR_SECRET'`
+* You should also configure a session secret:  
+  `heroku config:add SESSION_SECRET=abc123`
 * Push the app to Heroku:  
   `git push heroku master`
 * Check it's worked:  
