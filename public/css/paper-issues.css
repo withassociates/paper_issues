@@ -8,10 +8,7 @@ body {
   font-size: 15px;
 }
 
-h1 {
-  margin: 0 0 0.5em 0;
-}
-h2 {
+h1, h2 {
   margin: 0 0 0.5em 0;
 }
 
@@ -72,6 +69,7 @@ button:active {
   display: block;
   margin: 0;
   padding: 0;
+
   list-style: outside;
 }
 
@@ -81,6 +79,8 @@ button:active {
   border: 1px solid #eee;
   margin: 0;
   margin-bottom: -1px;
+
+  page-break-inside: avoid;
 }
 
 .issue .label {
@@ -98,7 +98,7 @@ button:active {
 
 .issue .title {
   display: block;
-  padding: 0.5em;
+  padding: 1em;
   padding-left: 2em;
 
   font-weight: bold;
