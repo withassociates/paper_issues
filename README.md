@@ -68,6 +68,18 @@ follow these steps (replacing YOUR_APP with your chosen app name):
 * Check it's worked:  
   `heroku open`
 
+## Contributing
+
+We welcome contributions on this extremely simple project. Make a pull request
+in the usual fashion.
+
+However, our most-wanted feature right now does not involve any code...
+
+We want to work out the most efficient technique for cutting out the paper
+issues. Answers in a comment here:
+
+https://github.com/withassociates/paper_issues/issues/3
+
 ## Copyright
 
 (The MIT License)
