@@ -63,7 +63,8 @@ button:active {
   margin: 4em auto;
   border: 0.5em solid #eee;
   padding: 2em;
-  max-width: 30em;
+  max-width: 34em;
+  box-sizing: border-box;
 }
 
 .cutout {
@@ -83,6 +84,23 @@ button:active {
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
+
+.panel.green {
+  border-color: #007200;
+  padding: 1em;
+}
+.panel.green .inner {
+  background: #b3dca0;
+  padding: 1em;
+}
+.panel.green a {
+  color: #004192;
+}
+.panel.green .title {
+  color: white;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
 
 .issues {
   display: block;
