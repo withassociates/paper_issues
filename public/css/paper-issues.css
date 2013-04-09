@@ -59,10 +59,29 @@ button:active {
 }
 
 .panel {
-  margin: 0 auto;
+  position: relative;
+  margin: 4em auto;
   border: 0.5em solid #eee;
   padding: 2em;
   max-width: 30em;
+}
+
+.cutout {
+  border: 1px dashed #777;
+}
+.cutout:after {
+  position: absolute;
+  bottom: -20px; left: -23px;
+
+  content: '✁';
+
+  font-size: 30px;
+
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .issues {
