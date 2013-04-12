@@ -1,9 +1,17 @@
 html, body {
+  display: block;
+  position: relative;
   margin: 0;
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  min-height: 100%;
+
   font-family: Helvetica, Arial, sans-serif;
   font-size: 15px;
 }
@@ -43,6 +51,13 @@ button:active {
   background-color: #777;
 }
 
+#main {
+  display: block;
+  position: relative;
+  padding-top: 4em;
+  padding-bottom: 384px;
+}
+
 .relocator {
   display: block;
   position: relative;
@@ -60,7 +75,7 @@ button:active {
 
 .panel {
   position: relative;
-  margin: 4em auto;
+  margin: 0 auto 4em;
   border: 0.5em solid #eee;
   padding: 2em;
   max-width: 34em;
@@ -118,6 +133,8 @@ button:active {
   margin-bottom: -1px;
 
   page-break-inside: avoid;
+
+  background: white;
 }
 
 .issue .label {
@@ -148,4 +165,16 @@ button:active {
   background: rgba(255, 255, 255, 0.9) url(/img/cog.gif) no-repeat center;
 
   visibility: hidden;
+}
+
+.footer {
+  display: block;
+  position: absolute;
+  top: auto; right: 0; bottom: 0; left: 0;
+  background: #66c0ff;
+}
+.illustration {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
